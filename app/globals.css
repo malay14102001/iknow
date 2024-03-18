@@ -1,0 +1,134 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+@import "swiper/css/effect-fade";
+
+.iknow_tm_main_section.active {
+  display: block;
+  -webkit-animation: slide-down 0.7s ease;
+  -moz-animation: slide-down 0.7s ease;
+}
+@keyframes slide-down {
+  0% {
+    -webkit-transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-webkit-keyframes slide-down {
+  0% {
+    -webkit-transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slide-down {
+  0% {
+    -moz-transform: translateY(30px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+.main_menu li.active {
+  width: 254.344px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.iknow_tm_mainpart_new_2 .main_menu ul li.current,
+.iknow_tm_mainpart_new_2 .main_menu ul li.entered {
+  width: 100% !important;
+}
+.iknow_tm_mainpart_new_2 .main_menu li:hover {
+  width: 100%;
+}
+.iknow_tm_mainpart_new_2 .main_menu li:hover span {
+  left: 46px;
+}
+
+.portfolio_filter a {
+  cursor: pointer;
+}
+
+/* CSS stylesheet */
+/* Define a keyframe animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Define a keyframe animation for fade-out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* CSS stylesheet */
+.gallery_zoom {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery_zoom > li {
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+}
+
+/* Apply fade-in animation when the "show" class is present */
+.gallery_zoom > li.show {
+  animation-name: fadeIn;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CSS stylesheet */
+.gallery_zoom {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery_zoom > li {
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  transform-origin: center center;
+  opacity: 0;
+  transform: scale(0.9); /* Start slightly smaller */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+}
+
+.gallery_zoom > li.show {
+  display: block;
+  animation: fade_in_show 0.5s;
+}
+.gallery_zoom > li {
+  display: none;
+}
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
